@@ -1,0 +1,25 @@
+1. please compile the phonebook program using the below command : 
+   gcc -g phonebook.c -o phonebook
+   it will generate a phonebook binary that contains several bugs .
+2. The program manages contacts 
+3. go over the program code and explore i - note that the program contains several bugs that prevent it from running correctly.
+   the main idea is to fix it .
+ 
+some bugs can be found using various tools : valgrind , gdb or regular code flow debug .
+the below steps 4,5 will help you detect the bugs .
+   
+4. run the program under valgrind : 
+	valgrind --leak-check=full --show-leak-kinds=all  --leak-resolution=high --trace-children=no --show-below-main=yes --num-callers=50 --log-file=phonebook.log ./phonebook
+5. enter at least 10 new contacts and try all the options below :
+        [1] |--> Insert
+        [2] |--> Delete
+        [3] |--> Edit
+        [4] |--> Search
+        [5] |--> Show All
+        [6] |--> Sort
+        [7] |--> Help
+        [8] |--> Exit
+
+6. what are the bugs hidden  in each of the options if any ? please use valgrind/gdb in order to fix the program and make it fully work.
+7. how would you extend the program ?
+
